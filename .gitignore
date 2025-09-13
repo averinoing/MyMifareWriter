@@ -1,0 +1,18 @@
+# Gradle
+.gradle/
+build/
+local.properties
+
+# Android Studio
+.idea/
+*.iml
+
+# App build
+app/build/
+
+# Logs
+*.log
+
+# Key files (NON caricare mai la tua chiave di firma)
+*.jks
+*.keystore
