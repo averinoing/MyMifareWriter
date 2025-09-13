@@ -1,0 +1,26 @@
+
+{
+    "matchTable": [
+
+    {
+      "description": "Test R&T",
+      "code": "045A4E82",
+      "key": "A0A1A2A3A4A5",
+      "keyType": "A",
+      "writes": [ {
+        "block": 16,
+        "command": "RT",
+        "key": "7AE384739817",
+        "keyType": "A"
+      },{
+        "block": 24,
+        "command": "T",
+        "key": "01ED8145BDF8",
+        "keyType": "A"
+      }
+      ]
+    }]
+    }
+  ]
+}
+

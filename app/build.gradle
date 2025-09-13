@@ -1,0 +1,41 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.averino.mifarewriter"
+        minSdk 21
+        targetSdk 34
+        versionCode 1
+        versionName "1.5  05082025"
+
+
+        // Per MIFARE Classic
+        manifestPlaceholders = [nfc: "true"]
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile(
+                    'proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    namespace 'com.averino.mifarewriter'
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            def appName = "MifareWriter"
+            def version = variant.versionName
+            def buildType = variant.buildType.name
+            outputFileName = "${appName}-v${version}.apk"
+        }
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+}
